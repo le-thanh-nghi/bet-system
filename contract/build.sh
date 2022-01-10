@@ -5,14 +5,14 @@ near delete $ID nghilt.testnet
 
 cargo build --target wasm32-unknown-unknown --release
 
-near deploy --accountId $ID --wasmFile target/wasm32-unknown-unknown/release/football_bet.wasm
+near deploy --accountId $ID --wasmFile target/wasm32-unknown-unknown/release/betsystem.wasm
 
 near call $ID new '{"owner_id": "'$ID'"}' --accountId $ID
-near call $ID bet '{"_game": "MU-Arsenal", "_bet": "1:1"}' --accountId quanglien.testnet --deposit 1
-near call $ID bet '{"_game": "Chelsea-ManCity", "_bet": "1:1"}' --accountId quanglien.testnet --deposit 1
-near call $ID end_game '{"_game": "MU-Arsenal", "_result": "1:2"}' --accountId $ID
+near call $ID bet '{"_game": "MU-Arsenal", "_bet": "1:1"}' --accountId nghilt.testnet --deposit 1
+near call $ID bet '{"_game": "Chelsea-ManCity", "_bet": "1:1"}' --accountId nghilt.testnet --deposit 1
+near call $ID end_game '{"_game": "MU-Chelsea", "_result": "0:2"}' --accountId $ID
 
-cargo build --target wasm32-unknown-unknown --release && near deploy --accountId $ID --wasmFile target/wasm32-unknown-unknown/release/football_bet.wasm
+cargo build --target wasm32-unknown-unknown --release && near deploy --accountId $ID --wasmFile target/wasm32-unknown-unknown/release/betsystem.wasm
 
 near view $ID get_bets '{}' --accountId $ID
 near view $ID get '' --accountId $ID
@@ -21,17 +21,17 @@ near view $ID get_bets '' --accountId $ID
 
 #demo
 gamer 1 :
-GAME1=vbi-near-cource-betsystem1.nghilt.testnet
+GAME1=vbi-near-course-betsystem1.nghilt.testnet
 near create-account $GAME1 --masterAccount nghilt.testnet --initialBalance 10
 
 
 gamer 2 :
-GAME2=vbi-near-cource-betsystem2.nghilt.testnet
+GAME2=vbi-near-course-betsystem2.nghilt.testnet
 near create-account $GAME2 --masterAccount nghilt.testnet --initialBalance 10
 
 
 HOLDER: là thằng smartcontract
-ID=vbi-near-cource-betsystem.nghilt.testnet
+ID=vbi-near-course-betsystem.nghilt.testnet
 
 step 1:
 #xem số near hiện tại của 3 vai trò

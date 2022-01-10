@@ -9,16 +9,20 @@
   <body>
     <header>
       <div>
-        MU-Arsenal Bet game
+        Bet System
       </div>
-      <div>
+      <div style="display: inherit;">
         <span id="nearAccountId"></span>
+        <button id="sign-out-button" style="display: none">Sign Out</button>
       </div>
     </header>
+    <div style="margin: 10px 0;">
+      <span style="color: red;">Play: <strong>Manchester United</strong> vs <strong>Chelsea</strong></span>
+    </div>
     <main id="signed-out-flow" style="display: none">
-      <h1>Welcome to NEAR!</h1>
+      <h1>Welcome to Bet System!</h1>
       <p>
-        To make use of the NEAR blockchain, you need to sign in. The button
+        To continuous to use this system, you need to sign in. The button
         below will sign you in using NEAR Wallet.
       </p>
       <p>
@@ -42,7 +46,7 @@
           <tr>
             <th>MU</th>
             <th></th>
-            <th>Arsenal</th>
+            <th>Chelsea</th>
             <th>Số tiền</th>
             <th></th>
           </tr>
@@ -52,70 +56,70 @@
             <td class="center">0</td>
             <td class="center">-</td>
             <td class="center">1</td>
-            <td><input bet-id="MA_0-1" type="text"></td>
+            <td><input bet-id="MA_0-1" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">0</td>
             <td class="center">-</td>
             <td class="center">2</td>
-            <td><input bet-id="MA_0-2" type="text"></td>
+            <td><input bet-id="MA_0-2" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">0</td>
             <td class="center">-</td>
             <td class="center">3</td>
-            <td><input bet-id="MA_0-3" type="text"></td>
+            <td><input bet-id="MA_0-3" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">0</td>
             <td class="center">-</td>
             <td class="center">4</td>
-            <td><input bet-id="MA_0-4" type="text"></td>
+            <td><input bet-id="MA_0-4" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">1</td>
             <td class="center">-</td>
             <td class="center">0</td>
-            <td><input bet-id="MA_1-0" type="text"></td>
+            <td><input bet-id="MA_1-0" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">2</td>
             <td class="center">-</td>
             <td class="center">0</td>
-            <td><input bet-id="MA_2-0" type="text"></td>
+            <td><input bet-id="MA_2-0" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">3</td>
             <td class="center">-</td>
             <td class="center">0</td>
-            <td><input bet-id="MA_3-0" type="text"></td>
+            <td><input bet-id="MA_3-0" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">4</td>
             <td class="center">-</td>
             <td class="center">0</td>
-            <td><input bet-id="MA_4-0" type="text"></td>
+            <td><input bet-id="MA_4-0" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">1</td>
             <td class="center">-</td>
             <td class="center">1</td>
-            <td><input bet-id="MA_1-1" type="text"></td>
+            <td><input bet-id="MA_1-1" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
           <tr>
             <td class="center">2</td>
             <td class="center">-</td>
             <td class="center">1</td>
-            <td><input bet-id="MA_2-1" type="text"></td>
+            <td><input bet-id="MA_2-1" type="text" placeholder="Input amount of NEAR"> NEAR</td>
             <td><button class="do-bet">Bet</button></td>
           </tr>
         </tbody>
@@ -128,16 +132,13 @@
           <div class="table-header">
             <div class="header__item filter__link filter__link--number">Account</div>
             <div class="header__item filter__link filter__link--number">Tỷ số</div>
-            <div class="header__item filter__link filter__link--number">Số tiền</div>
+            <div class="header__item filter__link filter__link--number">Số tiền (NEAR)</div>
             <div class="header__item filter__link filter__link--number">Won/Lost</div>
           </div>
           <div class="table-content">
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <button id="sign-out-button">Sign Out</button>
     </div>
   </body>
   <script type='text/javascript' src="https://code.jquery.com/jquery-3.6.0.js"></script>

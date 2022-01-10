@@ -127,7 +127,7 @@ impl FootballBet {
         // tạm thời bỏ qua việc kiểm tra caller chỉ là người chủ kèo.
         let account_id = env::signer_account_id();
 
-        assert_ne!(account_id, self.owner_id, "Chỉ được người sở hữu smartcontract mới có quyền thực hiện");
+        //assert_ne!(account_id, self.owner_id, "Chỉ được người sở hữu smartcontract mới có quyền thực hiện");
 
         let mut game = self.games.get_mut(_game);
 

@@ -135,7 +135,8 @@ button:hover, .color-box:hover {
   cursor: pointer;
 }
 
-.do-bet {
+.do-bet,
+#sign-in-button {
   background-color: #2f7f15;
 }
 
@@ -171,7 +172,7 @@ button:hover, .color-box:hover {
   background-color: #79FDFE;
 }
 
-.sky {
+.sky, {
   background-color: #7AD6FD;
 }
 

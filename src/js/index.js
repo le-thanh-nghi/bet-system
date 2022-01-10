@@ -18,7 +18,7 @@ $('.do-bet').click(function(){
   bet(betId, betValue);
 });
 
-const game = 'MU-Arsenal';
+const game = 'MU-Chelsea';
 /**
  *
  * @param {string} id
@@ -66,6 +66,7 @@ function signedOutFlow() {
 // Displaying the signed in flow container and fill in account-specific data
 function signedInFlow() {
   document.querySelector('#signed-in-flow').style.display = 'block'
+  document.querySelector('#sign-out-button').style.display = 'block'
 
   document.querySelectorAll('[data-behavior=account-id]').forEach(el => {
     el.innerText = window.accountId
@@ -88,7 +89,7 @@ async function getBets() {
     $('.table-content').append('<div class="table-row">' +
       '<div class="table-data">' + bet.account_id + '</div>' +
       '<div class="table-data">' + bet.bet + '</div>' +
-      '<div class="table-data">' + bet.bet_value + '</div>' +
+      '<div class="table-data">' + (parseFloat(bet.bet_value) / Math.pow(10, 24))+ '</div>' +
       '<div class="table-data">' + (gameResult.online ? '-': (bet.winner ? 'Won' : 'Lost')) + '</div>' +
       '</div>');
   }
