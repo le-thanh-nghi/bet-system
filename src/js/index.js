@@ -2,14 +2,9 @@ import 'regenerator-runtime/runtime'
 
 import { initContract, login, logout } from './utils'
 
-import getConfig from './config'
-const { networkId } = getConfig(process.env.NODE_ENV || 'development')
-const { KeyPair, utils, transactions } = require('near-api-js');
+const { utils } = require('near-api-js');
 export const nearUtils = utils;
 const DEFAULT_GAS = 300000000000000;
-
-// global variable used throughout
-let currentGreeting;
 
 $('.do-bet').click(function(){
   var thisTr = $(this).parent().parent();
