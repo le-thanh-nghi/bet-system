@@ -1,4 +1,4 @@
-ID=vbi-near-course-football-bet.nghilt.testnet
+ID=vbi-near-course-betsystem.nghilt.testnet
 
 near create-account $ID --masterAccount nghilt.testnet --initialBalance 10
 near delete $ID nghilt.testnet
@@ -21,17 +21,17 @@ near view $ID get_bets '' --accountId $ID
 
 #demo
 gamer 1 :
-GAME1=vbi-near-cource-football-bet1.nghilt.testnet
+GAME1=vbi-near-cource-betsystem1.nghilt.testnet
 near create-account $GAME1 --masterAccount nghilt.testnet --initialBalance 10
 
 
 gamer 2 :
-GAME2=vbi-near-cource-football-bet2.nghilt.testnet
+GAME2=vbi-near-cource-betsystem2.nghilt.testnet
 near create-account $GAME2 --masterAccount nghilt.testnet --initialBalance 10
 
 
 HOLDER: là thằng smartcontract
-ID=vbi-near-cource-football-bet.nghilt.testnet
+ID=vbi-near-cource-betsystem.nghilt.testnet
 
 step 1:
 #xem số near hiện tại của 3 vai trò
